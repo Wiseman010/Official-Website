@@ -71,7 +71,7 @@ input{
         top: 30px;
         position: relative;
     }
-/*     .slider{
+    .slider{
         position: absolute;
         top: 5px;
         left: 5px;
@@ -80,9 +80,9 @@ input{
         background-color: var(--nav-text-color);
         border-radius: 50%;
         transition: .3s;
-    } */
+    } 
 
-     /*
+     
      .slider:before{
         content: "";
         position: absolute;
@@ -104,7 +104,7 @@ input{
         background-color: var(--nav-text-color);
         border-radius: 50%;
         transition: .3s;
-    } */
+    } 
 
 }
 
