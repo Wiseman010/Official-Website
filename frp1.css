@@ -1,12 +1,12 @@
 :root{
-    --base-color: hsl(60, 51%, 89%);
+    --base-color: hsl(60, 81%, 94%);
     --text-color: hsl(36, 26%, 11%);
     --main-color: hsl(0, 0%, 5%);
     --curve-variant: hsla(258, 92%, 45%, 0.527);
     --curve-color: hsla(0, 2%, 29%, 0.932);
-    --hover-color: hsl(189, 97%, 15%);
+    --hover-color: hsl(56, 99%, 43%);
     --nav-color: linear-gradient(to right, hsl(60, 89%, 33%), hsl(39, 80%, 34%), hsl(73, 81%, 29%));
-    --nav-text-color: hsl(60, 51%, 89%);
+    --nav-text-color: hsl(0, 0%, 100%);
     --nav-hover-color: hsl(36, 26%, 11%);
 }
 
@@ -71,7 +71,7 @@ input{
         top: 30px;
         position: relative;
     }
-    .slider{
+/*     .slider{
         position: absolute;
         top: 5px;
         left: 5px;
@@ -80,9 +80,8 @@ input{
         background-color: var(--nav-text-color);
         border-radius: 50%;
         transition: .3s;
-    } 
-
-     
+    } *?
+     /*
      .slider:before{
         content: "";
         position: absolute;
@@ -104,7 +103,7 @@ input{
         background-color: var(--nav-text-color);
         border-radius: 50%;
         transition: .3s;
-    } 
+    } */
 
 }
 
@@ -120,6 +119,7 @@ input{
     box-shadow: inset 0px 5px 10px hsl(0, 0%, 0%);
     transition: .3s;
 }
+
 #darkmode-toggle {
     width: 0;
     height: 0;
@@ -212,12 +212,28 @@ header{
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         color: var(--base-color);
         text-align: center;
+        cursor: context-menu;
+
+        &::first-letter{
+            font-size: 2em;
+            color: var(--hover-color);
+        }
+
+        &::first-line{
+            font-size: 1.5em;
+        }
+
+        &:hover{
+           animation: shake .5s linear;
+        }
     }
+
     p{
         font-size: 1.5em;
         text-align: center;
         color: var(--base-color);
     }
+
     input{
         display: flex;
         margin: 20px auto;
@@ -252,6 +268,7 @@ header{
         transition: all .5s ease-in-out;
         text-align: center;
         }
+        
         #menuBtn{
             justify-content: center;
             align-items: center;
@@ -279,6 +296,10 @@ header{
     display: flex;
     justify-content: space-between;
 
+    &hover{
+        box-shadow: 0 0 10px var(--curve-variant);
+    }
+
     .search-label{
         display: flex;
         justify-content: center;
@@ -289,16 +310,23 @@ header{
         width: 60px;
         height: 60px;
         border-radius: 50%;;
-        color: black;
+        color: var(--base-color);
         cursor: pointer;
         transition: all .5s ease-in-out;
 
         &:hover{
-            background-color: var(--hover-color);
-            color: var(--nav-hover-color);
-            transform: scale(1.1);
+/*             color: var(--nav-hover-color);
+ */            transform: scale(1.1);
+            animation: shake .5s ease-in-out;
+        }
+
+
+        &:active{
+            left: -10px;
+            outline: none;
         }
     }
+
 
     .search{
         display: flex;
@@ -314,21 +342,43 @@ header{
         text-align: center;
 
         &::placeholder{
-            color: rgb(3, 3, 3);
+            color: var(--base-color);
             text-decoration: none;
         }
+        
 
         &:active{
             outline: none;
+            border: none;
         }
     }
 
 }
 
+
+        @keyframes shake{
+            0%{
+                transform: translateX(0);
+            }
+            25%{
+                transform: translateX(-5px);
+            }
+            50%{
+                transform: translateX(5px);
+            }
+            75%{
+                transform: translateX(-5px);
+            }
+            100%{
+                transform: translateX(0);
+            }
+            
+        }
+
 .menu{
+        display: flex;
         border: 2px solid var(--curve-variant);
         margin: 0 auto;
-        display: flex;
         position: relative;
         width: 100%;
         height: 100%;
@@ -514,9 +564,18 @@ footer .footer1{
         margin: auto;
         top: 0;
     }
-/*
+
+ /*   
   @media only screen and (max-width: 780px) {
+
+    .backgroung{
+        height: 50%;
+        max-height: 400px;
+        background-size: cover;
+    }
+
      .menu{
+        display: ;
         position: fixed;
         background-color: blue;
         width: 80%;
