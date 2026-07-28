@@ -9,10 +9,11 @@
     <link rel="stylesheet" href="frp1.css">
     <link rel="shortcut icon" href="Cap2ture.PNG" type="image/x-icon">
     <script src="https://kit.fontawesome.com/c7e31956c8.js" crossorigin="anonymous"></script>
+     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=search" />
 </head>
 <body >
     <input type="checkbox" name="darkmode" id="darkmode-toggle">
-    <label for="darkmode-toggle">
+    <label class="switch" for="darkmode-toggle">
          <i class="fas fa-sun"></i>
         <i class="fas fa-moon"></i>
         <span class="slider"></span>
@@ -22,22 +23,25 @@
     <div class="darkmode">
     <header>
         <div class="head">
-            <img src="pic\NoRom.PNG" alt="background" class="background">
+            <div class="background"> </div>
             <div class="clip">
                 <div class="roll par"></div>
                 <div class="roll par2"></div>
-                <h1>NoRom Bypass</h1>
-                <p>Bypass FRP Lock on Android Devices</p>
+                <h1>noRom Bypass</h1>
+                <p class="crousel" >Bypass FRP Lock on Android Devices</p>
             
                 <span>
-                    <form action="#">
-                        <abbr title="search">
-                            <input type="text" name="search" list="NoROMSearch" placeholder="search" id="search" autocomplete="off" >
-                        </abbr> 
-                    </form>
-                    <abbr title="search">
-                        <button type="submit" id="searchBtn" onclick=""><i class="fa-solid fa-magnifying-glass">search</i></button>  
+                    <div class="searchbar">
+                         <abbr title="search">
+                        <label for="search" class="search-label" onclick=""><i class="fa-solid fa-magnifying-glass"></i></label>  
                     </abbr>
+
+                        <abbr title="search">
+                            <input type="text" name="search" list="NoROMSearch" placeholder="search..." id="search" class="search" autocomplete="off" >
+                        </abbr> 
+                    
+                   
+            </div>
                     <abbr title="menu">
                         <button id="menuBtn"><i class="fa-solid fa-bars"></i></button>
                     </abbr>
@@ -53,8 +57,8 @@
                 </datalist>
         </div>
         <div class="menu">
-            <button id="xmark"><i class="fa-solid fa-xmark"></i></button>
-            <div class="menuBar">
+            <button id="xmark" class="xmark"><i class="fa-solid fa-xmark"></i></button>
+            <div class="menubar">
                 <h1>NoRom</h1>
                 <nav>
                     <ul>
@@ -462,7 +466,25 @@
                                 Backup
                             </a>
                         </li>
-                        <br> 
+                        <br>
+                        <li>
+                        <a href="https://www.mediafire.com/file/p8y7fyakaxjcwc8/EasyShare_5_.apk/file" data-wpel-link="external" target="_blank" rel="external noopener noreferrer">
+                            EasyShare_5_.apk (old version)
+                        </a>
+                        //
+                            <a href="https://github.com/EnterTechPro/APK-Bypass/raw/refs/heads/main/EasyShare%205%20.apk" target="_blank" rel="noopener">Backup</a>
+                    </li>
+                        <br>
+                        <li>
+                        <a href="https://www.mediafire.com/file/8y5ek35gigf4r1v/Remote_1_frp_%2528Norom%2529.apk/file" data-wpel-link="external" target="_blank" rel="external noopener noreferrer">
+                            Remote 1 frp.apk
+                        </a> 
+                        //
+                         <a href="https://f68.workupload.com/download/UfbMCmVq">
+                            Backup
+                        </a>
+                    </li>
+                    <br>  
                         <li>
                             <a href="https://github.com/vnrom/bypass/raw/master/Android_5_GAM.apk" data-wpel-link="exclude">
                                 Android_5_GAM.apk
