@@ -31,8 +31,8 @@ input{
     cursor: pointer;
     transition: .3s;
     float: right;
-    right: 5px;
-    top: 5px;
+    right: 10px;
+    top: 20px;
 
     i{
         position: absolute;
@@ -71,6 +71,7 @@ input{
         top: 30px;
         position: relative;
     }
+
 /*     .slider{
         position: absolute;
         top: 5px;
@@ -129,16 +130,19 @@ input{
 input:checked + .switch{
     background: rgb(50, 50, 51);
     transition: .3s;
-}   
+} 
+
 input:checked + .switch::after{
     left: 10px;
     transform: translateX(15px);
     background: linear-gradient(180deg, rgb(168, 164, 164), rgb(61, 60, 60));
 }
+
 .switch:active::after{
     width: 2px;
     transition: .3s;
 }
+
 .darkmode{
     width: 100vw;
     height: auto;
@@ -148,6 +152,7 @@ input:checked + .switch::after{
     transition: .3s;
     top: 0;
 }
+
 input:checked + .switch +.darkmode{
     background: rgb(22, 19, 19);
 }
@@ -157,6 +162,7 @@ header{
     height: 70%;
     overflow: hidden;
 }
+
 .background{
     background-color: black;
     top: 0;
@@ -172,6 +178,7 @@ header{
     filter: blur(5px);
     
 }
+
 .roll{
     width: 60px;
     height: 60px;
@@ -186,16 +193,19 @@ header{
     transform: translateY(35px);
     z-index: -1;
 }
+
 .par{
     float: left;
     margin: 20px;
     animation: roll infinite linear .9s  2s forwards;
 }
+
 .par2{
     float: right;
     margin: 20px;
     animation: roll infinite linear .9s  2s reverse;
 }
+
 /*
  @keyframes roll{
     0%{
@@ -231,10 +241,20 @@ header{
         }
     }
 
-    p{
+    .carousel-container{
+        display: block;
         font-size: 1.5em;
+        margin: 30px auto;
         text-align: center;
         color: var(--base-color);
+
+        .cursor {
+            font-weight: bold;
+            color: #333;
+            animation: blink 0.7s infinite;
+        }
+
+
     }
 
     input{
@@ -286,6 +306,11 @@ header{
         }
     }
 
+@keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+}
+
 .searchbar{
     border: 2px solid var(--curve-variant);
     margin: 0px auto;
@@ -320,8 +345,7 @@ header{
         transition: all .5s ease-in-out;
 
         &:hover{
-/*             color: var(--nav-hover-color);
- */            transform: scale(1.1);
+            transform: scale(1.1);
             animation: shake .5s ease-in-out;
         }
 
@@ -395,7 +419,7 @@ header{
             display: none;
         }
 
-        .menubar{
+        .menuList{
             display: flex;
             flex-wrap: wrap;
 
@@ -575,10 +599,18 @@ footer .footer1{
 
     h1{
         font-size: 2em;
+        margin-top: 3em;
     }
 
-    .crousel{
+    .switch{
+        right: 60px;
+        top: 20px;
+        z-index: -1;
+    }
+
+    .carousel-container{
         font-size: .9em;
+        margin: 50px auto;
     }
 
     p, a, li{
@@ -605,7 +637,7 @@ footer .footer1{
         display: flex;
         position: absolute;
         top: -10px;
-        left: 10px;
+        right: 20px;
         border-radius: 50%;
 
         &:hover{
@@ -618,7 +650,7 @@ footer .footer1{
         border: 2px solid var(--curve-variant);
         margin: 0px auto;
         width: 300px;
-        height: 50px;
+        height: 55px;
         box-sizing: border-box;
         display: flex;
         justify-content: center;
@@ -685,7 +717,10 @@ footer .footer1{
 
     }
 
-    /*
+    .off{
+        display: none;
+    }
+
      .menu{
         position: fixed;
         background-color: blue;
@@ -693,8 +728,9 @@ footer .footer1{
         height: 90vh;
         top: 10px;
         color: var(--nav-text-color);
-        z-index: 11111;
+        z-index: 11;
         border-radius: 0px 25px 20px 0px;
+        transition: all .5s linear;
 
         .xmark{
             display: block;
@@ -718,7 +754,7 @@ footer .footer1{
             }
         }
 
-        .menubar{
+        .menuList{
             position: absolute;
             display: flex;
             flex-direction: column;  
