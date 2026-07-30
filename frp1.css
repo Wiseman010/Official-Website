@@ -603,7 +603,7 @@ footer .footer1{
     }
 
     .switch{
-        right: 60px;
+        right: 70px;
         top: 20px;
         z-index: -1;
     }
@@ -637,7 +637,7 @@ footer .footer1{
         display: flex;
         position: absolute;
         top: -10px;
-        right: 20px;
+        right: 10px;
         border-radius: 50%;
 
         &:hover{
@@ -724,7 +724,7 @@ footer .footer1{
      .menu{
         position: fixed;
         background-color: blue;
-        width: 80%;
+        width: 70%;
         height: 90vh;
         top: 10px;
         color: var(--nav-text-color);
