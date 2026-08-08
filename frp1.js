@@ -95,3 +95,85 @@ function handleScreenResize(e) {
 // 6. Run the layout checker once on load and watch for future changes
 handleScreenResize(mobileQuery);
 mobileQuery.addEventListener("change", handleScreenResize);
+
+
+
+//Search results 
+
+// Cache DOM selections
+const searchInput = document.getElementById('search');
+const searchResults = document.getElementById('search-results');
+const originalItems = document.querySelectorAll('.original-list li');
+const searchContainer = document.querySelector('.search-container');
+const resultEl = document.querySelector('.result');
+
+// Map search data once
+const searchData = Array.from(originalItems).map(item => ({
+  text: item.textContent.trim(),
+  lowerText: item.textContent.trim().toLowerCase(), // Cache lowercase for faster filtering
+  id: item.id
+}));
+
+// Efficient event listener using a DocumentFragment
+searchInput.addEventListener('input', (e) => {
+  const query = e.target.value.trim().toLowerCase();
+
+  if (!query) {
+    searchResults.innerHTML = '';
+    searchResults.classList.add('hidden');
+    resultEl.classList.add('hidden');
+    return;
+  }
+
+  const filtered = searchData.filter(item => item.lowerText.includes(query));
+  searchResults.classList.remove('hidden');
+  resultEl.classList.remove('hidden');
+
+  if (filtered.length === 0) {
+    searchResults.innerHTML = '<li class="no-results">No results found</li>';
+    return;
+  }
+
+  // Use a fragment to batch DOM insertions (huge performance boost)
+  const fragment = document.createDocumentFragment();
+
+  filtered.forEach(item => {
+    const li = document.createElement('li');
+    li.textContent = item.text;
+    li.dataset.targetId = item.id; // Store ID in dataset for event delegation
+    fragment.appendChild(li);
+  });
+
+  searchResults.innerHTML = '';
+  searchResults.appendChild(fragment);
+});
+
+// Single Event Delegation Listener for all dropdown clicks
+searchResults.addEventListener('click', (e) => {
+  const li = e.target.closest('li');
+  if (!li || li.classList.contains('no-results')) return;
+
+  searchInput.value = li.textContent;
+  searchResults.classList.add('hidden');
+
+  const targetId = li.dataset.targetId;
+  const targetElement = document.getElementById(targetId);
+
+  if (targetElement) {
+    targetElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+    // CSS Class based flash (better than hardcoded inline styles)
+    targetElement.classList.add('flash-highlight');
+    setTimeout(() => {
+      targetElement.classList.remove('flash-highlight');
+    }, 1500);
+  }
+});
+
+// Close dropdown on outside click
+document.addEventListener('click', (e) => {
+  if (searchContainer && !searchContainer.contains(e.target)) {
+    searchResults.classList.add('hidden');
+  }
+});
+
