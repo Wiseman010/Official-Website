@@ -5,8 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="description" content="NoRom Bypass, FRP Lock, Android Bypass">
-    <meta name="keywords" content="NoRom, Bypass, FRP Lock, Android Bypass">
-    <title>NoRom</title>
+    <!-- 1. Browser Title (Matches what people type into Google search) -->
+    <title>Norom - FRP Bypass Tools, Firmwares & Afriqunlock Solutions</title>
+
+    <!-- 2. Search Engine Description (Matches keywords to user search intent) -->
+    <meta name="description" content="Download the latest FRPAPK, flashing firmware, and bypass ramdisk tools at Norom.com. Fast solutions for Samsung, iPhone, and Afriqunlock devices.">
+
+    <!-- 3. Open Graph Metadata (Ensures links look professional when shared on WhatsApp, Telegram, or Facebook) -->
+    <meta property="og:title" content="Norom - FRP Bypass Tools & Flashing Firmwares">
+    <meta property="og:description" content="Get professional tools for Samsung, iPhone, and Norom bypass. Free FRPAPK download and ramdisk unlock solutions.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://norom.com">
+    <meta property="og:image" content="https://norom.com">
+
+    <!-- 4. Legacy Keywords (Maintained for smaller search indexes) -->
+    <meta name="keywords" content="frpapk, frp, afriqunlock, norom, bypass, ramdisk, samsung, iphone, tools, firmware">
+        <meta name="keywords" content="NoRom, Bypass, FRP Lock, Android Bypass">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
@@ -48,9 +62,12 @@
                         <abbr title="search">
                             <input type="text" name="search" list="NoROMSearch" placeholder="search..." id="search" class="search" autocomplete="off" >
                         </abbr> 
-                    
-                   
-            </div>
+                
+                    </div>
+                    <div class="result hidden">
+                        <ul id="search-results" class="results-dropdown hidden"></ul>
+                    </div>
+
                     <abbr title="menu">
                         <button id="menuBar" class="menuBtn" ><i class="fa-solid fa-bars "></i></button>
                     </abbr>
@@ -84,117 +101,105 @@
         </div>  
     </header>
 
-    <div class="curve"></div>
-    
+<!--     <div class="curve"></div>
+ -->    
     <main>
         <div class="links">
             <h2>NoRom Bypass</h2>
             <p>Bypass FRP Lock on Android Devices</p>
             <section class="section1">
                 <nav>
-                    <ul class="block-list">
+                    <ul class="block-list original-list">
                         
-                <li>
+                <li id="result1" class="flash-highlight">
                     <a href="intent://com.motorola.moto/#Intent;scheme=android-app;end" target="_blank" rel="noopener">
                         Open 
                         <img loading="lazy" decoding="async" class="alignnone wp-image-5274" src="pic/moto.png" alt="Motorola Moto" width="32" height="32">
                          <strong><mark style="background-color: rgba(0, 0, 0, 0);" class="has-inline-color has-black-color">Motorola Moto</mark></strong>
                         </a>
                 </li>
-                <li>
+                <li id="result2">
                     <a href="intent://com.motorola.securityhub/#Intent;scheme=android-app;end" target="_blank" rel="noopener">
                         Open 
                         <img loading="lazy" decoding="async" class="alignnone wp-image-5282" src="https://www.entertechpro.com/wp-content/uploads/2025/01/Moto-Secure-150x150.png" alt="Moto Secure" width="32" height="32"> 
                         <strong><mark style="background-color: rgba(0, 0, 0, 0);" class="has-inline-color has-black-color">Moto Secure</mark></strong>
                     </a>
                 </li>
-                <li>
+                <li id="result3">
                     <a href="intent://com.motorola.ccc.notification/#Intent;scheme=android-app;end" target="_blank" rel="noopener">Open <img loading="lazy" decoding="async" class="alignnone wp-image-5286" src="pic/hello.png" alt="Moto Hello You" width="31" height="31"> <strong><mark style="background-color: rgba(0, 0, 0, 0);" class="has-inline-color has-black-color"> Moto Hello You</mark></strong>
                     </a>
                 </li>
-                <li>
+                <li id="result4">
                     <a href="intent://com.motorola.launcher3/#Intent;scheme=android-app;end">
                         Open 
                         <img loading="lazy" decoding="async" class="alignnone wp-image-5290" src="pic/Motorola.jpg" alt="Motorola Launcher" width="33" height="33"> <strong><mark style="background-color: rgba(0, 0, 0, 0);" class="has-inline-color has-black-color"> Motorola Launcher</mark></strong>
                     </a>
                 </li>
-                <li>
+                <li id="result5">
                     <a href="intent://com.futuredial.asusdatatransfer/#Intent;scheme=android-app;end">
                         Open 
                         <img loading="lazy" decoding="async" class="alignnone wp-image-5300" src="https://www.entertechpro.com/wp-content/uploads/2025/01/ASUS-Phone-Clone-150x150.jpg" alt="ASUS Phone Clone" width="32" height="32"> <strong><mark style="background-color: rgba(0, 0, 0, 0);" class="has-inline-color has-black-color">ASUS Phone Clone</mark></strong>
                     </a>
                 </li>
-                            <li> 
+                            <li id="result6"> 
                                        <a href="intent://com.sec.android.app.samsungapps/#Intent;scheme=android-app;end" data-wpel-link="internal"> Open <img decoding="async" src="pic/galaxy-store.png" alt="Galaxy Store" style="width: 30px; height: 35px;"><strong><mark style="background-color: rgba(0, 0, 0, 0);" class="has-inline-color has-black-color"> Galaxy Store</mark></strong></a>
                             </li>
-                            <li>
+                            <li id="result7">
                                 <a href="intent://com.google.android.googlequicksearchbox/#Intent;scheme=android-app;end" data-wpel-link="internal"> Open <img decoding="async" src="pic\google.jpg" style="width: 30px; height: 30px;" alt="Google Quick Search Box"><strong><mark style="background-color: rgba(0, 0, 0, 0);" class="has-inline-color has-black-color"> Google Quick Search</mark></strong></a> 
                             </li>
-                            <li>
+                            <li id="result8">
                                 <a href="intent://com.android.settings/#Intent;scheme=android-app;end" data-wpel-link="internal"> Open <img decoding="async" src="pic\setting.png" style="width: 30px; height: 30px;" alt="Setting App"><strong><mark style="background-color: rgba(0, 0, 0, 0);" class="has-inline-color has-black-color"> Setting</mark></strong></a>
                             </li>
-                            <li>
+                            <li id="result9">
                                 <a href="intent://com.google.android.setupwizard.qrprovision.QrScanActivity/#Intent;scheme=android-app;end" data-wpel-link="internal">Open <img decoding="async" src="pic\scan.jpg" style="width: 30px; height: 30px;" alt="Setting App"><strong><mark style="background-color: rgba(0, 0, 0, 0);" class="has-inline-color has-black-color">Qr scan </mark></strong></a>
                             </li>
-                            <li>
+                            <li id="result10">
                                 <a href="intent://com.activitymanager/#Intent;scheme=android-app;end" data-wpel-link="internal">Open <img decoding="async" src="pic/activity-manager.jpeg"style="width: 30px; height: 35px;"  alt="Setting App"><strong><mark style="background-color: rgba(0, 0, 0, 0);" class="has-inline-color has-black-color">Activtivty manager</mark></strong></a>
                             </li>
-                            <li>
+                            <li id="result11">
                                 <a href="intent://com.google.android.gms/#Intent;scheme=promote_smartlock_scheme;end" data-wpel-link="internal">Open <img decoding="async" src="pic\system-lock-screen.png" style="width: 30px; height: 30px;" alt="Screen Smartlock"><mark style="background-color: rgba(0, 0, 0, 0);" class="has-inline-color has-black-color"><strong> Screen Smartlock</strong></mark></a> 
                             </li>
-                            <li>
+                            <li id="result12">
                                 <a href="intent://com.sec.android.app.myfiles/#Intent;scheme=android-app;end" data-wpel-link="internal">Open <img decoding="async" src="https://vnrom.net/wp-content/uploads/2022/07/samsung-my-file.png" alt="Samsung My Files"><strong><mark style="background-color: rgba(0, 0, 0, 0);" class="has-inline-color has-black-color">Samsung My Files</mark></strong></a>
                             </li>
-                            <li>
+                            <li id="result13">
                                 <a href="intent://com.google.android.youtube/#Intent;scheme=android-app;end" data-wpel-link="internal">Open <img decoding="async" src="https://vnrom.net/wp-content/uploads/2022/07/youtube.png" alt="Youtube"><strong><mark style="background-color: rgba(0, 0, 0, 0);" class="has-inline-color has-black-color">Youtube</mark></strong></a>
                             </li>
-                            <li>
+                            <li id="result14">
                                 <a href="intent://com.android.chrome/#Intent;scheme=android-app;end" data-wpel-link="internal">Open <img decoding="async" src="https://vnrom.net/wp-content/uploads/2022/07/chrome.png" alt="Chrome"><strong><mark style="background-color: rgba(0, 0, 0, 0);" class="has-inline-color has-black-color">Chrome</mark></strong></a>
                             </li>
-                            <li>
+                            <li id="result15">
                                 <a href="intent://com.sec.android.app.popupcalculator/#Intent;scheme=android-app;end" data-wpel-link="internal">Open <img decoding="async" src="https://vnrom.net/wp-content/uploads/2023/08/calculator.png" alt="Calculator"><strong><mark style="background-color: rgba(0, 0, 0, 0);" class="has-inline-color has-black-color">Calculator</mark></strong></a>
                             </li>
-                            <li>
+                            <li id="result16">
                                 <a href="https://apps.samsung.com/appquery/appDetail.as?appId=com.sec.android.app.sbrowser&amp;cld-000005006635" data-wpel-link="external" target="_blank" rel="external noopener noreferrer">Open <img decoding="async" src="pic\Samsung_Internet_logo.svg.png" style="width: 30px; height: 35px;" alt="Samsung Internet"><strong><mark style="background-color: rgba(0, 0, 0, 0);" class="has-inline-color has-black-color"> Samsung Internet</mark></strong></a>
                             </li>
-                            <li>
+                            <li id="result17">
                                 <a href="intent://com.rrivenllc.shieldx/#Intent;scheme=android-app;end" data-wpel-link="internal">Open<img decoding="async" src="pic\alliance shield.png" style="width: 30px; height: 30px;" alt="Alliance Shield"> <strong><mark style="background-color: rgba(0, 0, 0, 0);" class="has-inline-color has-black-color">Alliance Shield</mark></strong></a>  
                             </li>
-                            <li>
+                            <li id="result18">
                                 <a href="https://galaxy.store/setting" data-wpel-link="external" target="_blank" rel="external noopener noreferrer">Open <img decoding="async" src="https://vnrom.net/wp-content/uploads/2022/07/android-hidden-settings.png"><strong><mark style="background-color: rgba(0, 0, 0, 0);" class="has-inline-color has-black-color"> Android Hidden Settings</mark></strong></a>
                             </li>
-                            <li>
+                            <li id="result19">
                                 <a href="intent://com.google.android.gsf.login.LoginActivity/#Intent;scheme=android-app;end" data-wpel-link="internal">Open <img decoding="async" src="pic\google.jpg"style="width: 30px; height: 35px;"><strong><mark style="background-color: rgba(0, 0, 0, 0);" class="has-inline-color has-black-color"> Login Account</mark></strong></a>
                             </li>
-                            <li>
+                            <li id="result20">
                                 <a href="intent://com.sec.android.app.launcher/#Intent;scheme=android-app;end" data-wpel-link="internal">Open <img decoding="async" src="https://vnrom.net/wp-content/uploads/2022/07/home-launcher.png"><strong><mark style="background-color: rgba(0, 0, 0, 0);" class="has-inline-color has-black-color"> Home Launcher</mark></strong></a>  
                             </li>
-                            <li>
+                            <li id="result21">
                                 <a href="tel:123456789/#Intent;scheme=android-app;end" data-wpel-link="internal">Open <img decoding="async" src="pic\phone-icon.png" style="width: 30px; height: 35px;" alt="*#0*#"><strong><mark style="background-color: rgba(0, 0, 0, 0);" class="has-inline-color has-black-color"> *#85#</mark></strong></a>   
                             </li>
                         </ul>
                 </nav>
             </section> 
-            <!-- <section class="section2">
-                <h2>Bypass FRP Lock</h2>
-                <p>Follow the steps below to bypass FRP lock on your Android device.</p>
-                <ol>
-                    <li>Download and install the NoRom Bypass Tool.</li>
-                    <li>Connect your device to your computer.</li>
-                    <li>Open the NoRom Bypass Tool and follow the instructions.</li>
-                    <li>Once completed, restart your device.</li>
-                </ol>
-                <p>If you encounter any issues, please refer to our <a href="frp5.html">support page</a>.</p>
-                <p>For more information, visit our <a href="https://norombypass.com" target="_blank">website</a>.</p>
-                <p>For support, contact us on <a href="mailto:pnoble900@gmail.com">our mail</a> directly </p>
-                </section> -->
+            
             <section class="section3">
                 <h2>Download NoRom Bypass Tool</h2>
                 <p>Click the button below to download the latest version of NoRom Bypass Tool.</p>
                 <a href="https://norombypass.com/download" class="download-button">Download Now</a>
                 <nav>
-                    <ul>
-                        <li>
+                    <ul class="original-list">
+                        <li id="result22">
                             <a href="//com.sec.android.app.modemui.activities.USB.settings/#Intent;scheme=android-app;end" data-wpel-link="external" target="_blank" rel="external noopener noreferrer">
                                 Open 
                                 <img decoding="async" src="https://vnrom.net/wp-content/uploads/2022/07/adb.png" alt="ADB">
@@ -205,7 +210,7 @@
                                 </strong>
                             </a>
                         </li>
-                        <li>
+                        <li id="result23">
                             <a href="//com.sec.android.app.servicemodeapp/#Intent;scheme=promote_USBSettings_scheme;end" data-wpel-link="external" target="_blank" rel="external noopener noreferrer">
                                 Open 
                                 <img decoding="async" src="pic\usb setting.png" style="width: 30px; height: 30px;" alt="USB Setting">
@@ -216,7 +221,7 @@
                                     </strong>
                                 </a>
                             </li>
-                        <li>
+                        <li id="result24">
                             <a href="tel:*#0*#/#Intent;scheme=android-app;end" data-wpel-link="internal">
                                 Open 
                                 <img decoding="async" src="pic\phone-icon.png" style="width: 30px; height: 30px;" alt="*#0*#">
@@ -227,7 +232,7 @@
                                     </strong>
                                 </a>
                             </li>
-                        <li>
+                        <li id="result25">
                             <a href="//com.google.android.apps.maps/#Intent;scheme=android-app;end" data-wpel-link="external" target="_blank" rel="external noopener noreferrer">
                                 Open 
                                 <img decoding="async" src="pic\Google_Maps_icon_(2020).svg.png" style="width: 20px; height: 30px;" alt="Google Maps">
@@ -238,7 +243,7 @@
                                 </strong>
                             </a>
                         </li>
-                        <li>
+                        <li id="result26">
                             <a href="//com.google.android.apps.googleassistant/#Intent;scheme=android-app;end" data-wpel-link="external" target="_blank" rel="external noopener noreferrer">
                                 Open
                                  <img decoding="async" src="pic\google-assistant--v2.png" style="width: 30px; height: 30px;" alt="Google Assistant">
@@ -249,7 +254,7 @@
                                 </strong>
                             </a>
                         </li>
-                        <li>
+                        <li id="result27">
                             <a href="//com.google.android.gm/#Intent;scheme=android-app;end" data-wpel-link="external" target="_blank" rel="external noopener noreferrer">
                                 Open
                                  <img decoding="async" src="https://vnrom.net/wp-content/uploads/2022/07/gmail.png" alt="Gmail">
@@ -260,7 +265,7 @@
                                     </strong>
                                 </a>
                             </li>
-                        <li>
+                        <li id="result28">
                             <a href="https://galaxystore.samsung.com/detail/com.s9launcher.dir.launcher" data-wpel-link="external" target="_blank" rel="external noopener noreferrer">
                                 Open
                                  <img decoding="async" src="pic\Samsung s9 launcher.png" style="width: 30px; height: 30px;" alt="S9 Launcher">
@@ -271,7 +276,7 @@
                                 </strong>
                             </a>
                         </li>
-                        <li>
+                        <li id="result29">
                             <a href="//com.android.settings/com.samsung.android.settings.biometrics.fingerprint.FingerprintEntry/#Intent;scheme=android-app;end" data-wpel-link="external" target="_blank" rel="external noopener noreferrer">
                                 Open 
                                 <img decoding="async" src="https://vnrom.net/wp-content/uploads/2022/07/touch-id.png" alt="Touch ID">
@@ -282,7 +287,7 @@
                                 </strong>
                             </a>
                         </li>
-                        <li>
+                        <li id="result30">
                             <a href="//com.samsung.knox.securefolder/#Intent;scheme=android-app;end" data-wpel-link="external" target="_blank" rel="external noopener noreferrer">
                                 Open 
                                 <img decoding="async" src="pic\Samsung secure folder.jpeg" style="width: 30px; height: 30px;" alt="Samsung Secure Folder">
@@ -293,7 +298,7 @@
                                     </strong>
                                 </a>
                             </li>
-                        <li>
+                        <li id="result31">
                             <a href="//com.sec.android.easyMover/#Intent;scheme=android-app;end" data-wpel-link="external" target="_blank" rel="external noopener noreferrer">
                                 Open
                                  <img decoding="async" src="pic\Samsung smart switch.jpg" style="width: 30px; height: 30px;" alt="Smart Switch">
@@ -304,7 +309,7 @@
                                     </strong>
                                 </a>
                             </li>
-                        <li>
+                        <li id="result32">
                             <a href="//com.samsung.android.dialer/#Intent;scheme=android-app;end" data-wpel-link="external" target="_blank" rel="external noopener noreferrer">
                                 Open
                                  <img decoding="async" src="https://vnrom.net/wp-content/uploads/2022/07/dialer-call.png" alt="Samsung Dialer Call">
@@ -315,7 +320,7 @@
                                 </strong>
                             </a>
                         </li>
-                        <li>
+                        <li id="result33">
                             <a href="//com.mi.android.globalFileexplorer/#Intent;scheme=android-app;end" data-wpel-link="external" target="_blank" rel="external noopener noreferrer">
                                 Open 
                                 <img decoding="async" src="pic\mi file manager.png" style="width: 30px; height: 30px;" alt="Mi File Manager">
@@ -326,7 +331,7 @@
                                     </strong>
                                 </a>
                             </li>
-                        <li>
+                        <li id="result34">
                             <a href="//com.xiaomi.midrop/#Intent;scheme=android-app;end" data-wpel-link="external" target="_blank" rel="external noopener noreferrer">
                                 Open
                                  <img decoding="async" src="pic\xiaomi shareme.jpg" style="width: 30px; height: 30px;" alt="Vivo EasyShare">
@@ -337,7 +342,7 @@
                                 </strong>
                             </a>
                         </li>
-                        <li>
+                        <li id="result35">
                             <a href="//com.vivo.easyshare/#Intent;scheme=android-app;end" data-wpel-link="external" target="_blank" rel="external noopener noreferrer">
                                 Open
                                  <img decoding="async" src="pic\vivo easy share.png" style="width: 30px; height: 30px;" alt="Vivo EasyShare">
@@ -348,7 +353,7 @@
                                     </strong>
                                 </a>
                             </li>
-                        <li>
+                        <li id="result36">
                             <a href="//com.infinix.xshare/#Intent;scheme=android-app;end" data-wpel-link="external" target="_blank" rel="external noopener noreferrer">
                                 Open 
                                 <img decoding="async" src="pic\xsharemini.jpeg" style="width: 30px; height: 30px;" alt="Xshare Mini">
@@ -359,7 +364,7 @@
                                 </strong>
                             </a>
                         </li>
-                        <li>
+                        <li id="result37">
                             <a href="//com.coloros.backuprestore/#Intent;scheme=android-app;end" data-wpel-link="external" target="_blank" rel="external noopener noreferrer">
                                 Open
                                  <img decoding="async" src="https://vnrom.net/wp-content/uploads/2023/08/oppo-phone-clone.png" alt="OPPO Phone Clone">
@@ -375,20 +380,20 @@
             </section>
             <section class="section4">
                 <nav>
-                    <ul class="wp-block-list">
-                        <li>
+                    <ul class="wp-block-list original-list">
+                        <li id="result38">
                             <a href="https://galaxystore.samsung.com/detail/com.rrivenllc.shieldx?session_id=W_0a719781bf2f739158262639f4c63d35" data-wpel-link="external" target="_blank" rel="external noopener noreferrer">
                                 Alliance Shield on Galaxy Store
                             </a>
                         </li>                   
                         <br>
-                        <li>
+                        <li id="result39">
                             <a href="https://galaxystore.samsung.com/detail/org.aospstudio.files" data-wpel-link="external" target="_blank" rel="external noopener noreferrer">
                                 Files Shortcut on Galaxy Store
                             </a>
                         </li>
                                <br>            
-                        <li>
+                        <li id="result40">
                             <a href="https://github.com/vnrom/bypass/raw/master/Activity_Launcher.apk" data-wpel-link="exclude">
                                 Activity_Launcher.apk
                             </a>
@@ -398,7 +403,7 @@
                             </a>
                         </li>
                                <br>             
-                        <li>
+                        <li id="result41">
                             <a href="https://github.com/vnrom/bypass/raw/master/Alliance_Shield_0.9.16.apk" data-wpel-link="exclude">
                                 Alliance_Shield.apk
                             </a>
@@ -408,7 +413,7 @@
                             </a>
                         </li>
                         <br> 
-                        <li>
+                        <li id="result42">
                             <a href="https://github.com/vnrom/bypass/raw/master/Package_Manager_v7.0.apk" data-wpel-link="exclude">
                                 Package_Manager.apk
                             </a>
@@ -418,7 +423,7 @@
                             </a>
                         </li>
                         <br>   
-                        <li>
+                        <li id="result43">
                             <a href="https://github.com/vnrom/bypass/raw/master/Package_Disabler_Pro_13.5.apk" data-wpel-link="exclude">
                                 Package_Disabler_Pro.apk
                             </a>
@@ -428,7 +433,7 @@
                             </a>
                         </li>
                         <br> 
-                        <li>
+                        <li id="result44">
                             <a href="https://github.com/vnrom/bypass/raw/master/Package_Disabler_PDC.apk" data-wpel-link="exclude">
                                 Package_Disabler_PDC.apk
                             </a>
@@ -438,7 +443,7 @@
                             </a>
                         </li>
                         <br> 
-                        <li>
+                        <li id="result45">
                             <a href="https://github.com/vnrom/bypass/raw/master/Disable_systemUI.xml" data-wpel-link="exclude">
                                 Disable_systemUI.xml
                             </a>
@@ -448,7 +453,7 @@
                             </a>
                         </li>
                         <br> 
-                        <li>
+                        <li id="result46">
                             <a href="https://github.com/vnrom/bypass/raw/master/Disable_GoogleService.xml" data-wpel-link="exclude">
                                 Disable_GoogleService.xml
                             </a>
@@ -458,7 +463,7 @@
                             </a>
                         </li>
                         <br> 
-                        <li>
+                        <li id="result47">
                             <a href="https://github.com/vnrom/bypass/raw/master/Disable_MDM_Knox.xml" data-wpel-link="exclude">
                                 Disable_MDM_Knox.xml
                             </a>
@@ -468,7 +473,7 @@
                             </a>
                         </li>
                         <br> 
-                        <li>
+                        <li id="result48">
                             <a href="https://github.com/vnrom/bypass/raw/master/Disable_PlayServices.xml" data-wpel-link="exclude">
                                 Disable_PlayServices.xml
                             </a>
@@ -478,7 +483,7 @@
                             </a>
                         </li>
                         <br>
-                        <li>
+                        <li id="result49">
                         <a href="https://www.mediafire.com/file/p8y7fyakaxjcwc8/EasyShare_5_.apk/file" data-wpel-link="external" target="_blank" rel="external noopener noreferrer">
                             EasyShare_5_.apk (old version)
                         </a>
@@ -486,7 +491,7 @@
                             <a href="https://github.com/EnterTechPro/APK-Bypass/raw/refs/heads/main/EasyShare%205%20.apk" target="_blank" rel="noopener">Backup</a>
                     </li>
                         <br>
-                        <li>
+                        <li id="result50">
                         <a href="https://www.mediafire.com/file/8y5ek35gigf4r1v/Remote_1_frp_%2528Norom%2529.apk/file" data-wpel-link="external" target="_blank" rel="external noopener noreferrer">
                             Remote 1 frp.apk
                         </a> 
@@ -496,7 +501,7 @@
                         </a>
                     </li>
                     <br>  
-                        <li>
+                        <li id="result51">
                             <a href="https://github.com/vnrom/bypass/raw/master/Android_5_GAM.apk" data-wpel-link="exclude">
                                 Android_5_GAM.apk
                             </a>
@@ -506,7 +511,7 @@
                             </a>
                         </li>
                         <br> 
-                        <li>
+                        <li id="result52">
                             <a href="https://github.com/vnrom/bypass/raw/master/Android_6_GAM.apk" data-wpel-link="exclude">
                                 Android_6_GAM.apk
                             </a>
@@ -516,7 +521,7 @@
                             </a>
                         </li>
                         <br> 
-                        <li>
+                        <li id="result53">
                             <a href="https://github.com/vnrom/bypass/raw/master/Android_8-9-10_GAM.apk" data-wpel-link="exclude">
                                 Android_8-9-10_GAM.apk
                             </a> 
@@ -526,7 +531,7 @@
                             </a>
                         </li>
                         <br> 
-                        <li>
+                        <li id="result54">
                             <a href="https://github.com/vnrom/bypass/raw/master/Notification_Bar_18.5.8.1.apk" data-wpel-link="exclude">
                                 Notification_Bar.apk
                             </a>
@@ -536,7 +541,7 @@
                             </a>
                         </li>
                         <br> 
-                        <li>
+                        <li id="result55">
                             <a href="https://github.com/vnrom/bypass/raw/master/Google_Setting.apk" data-wpel-link="exclude">
                                 Google_Setting.apk
                             </a>
@@ -546,7 +551,7 @@
                             </a>
                         </li>
                         <br> 
-                        <li>
+                        <li id="result56">
                             <a href="https://github.com/vnrom/bypass/raw/master/FRP_Bypass.apk" data-wpel-link="exclude">
                                 FRP_Bypass.apk
                             </a>
@@ -556,7 +561,7 @@
                             </a>
                         </li>
                         <br> 
-                        <li>
+                        <li id="result57">
                             <a href="https://github.com/vnrom/bypass/raw/master/FRP_Android_7.apk" data-wpel-link="exclude">
                                 FRP_Android_7.apk
                             </a>
@@ -566,7 +571,7 @@
                             </a>
                         </li>
                         <br> 
-                        <li>
+                        <li id="result58">
                             <a href="https://github.com/vnrom/bypass/raw/master/FRP_vnROM.apk" data-wpel-link="exclude">
                                 FRP_NoROM.apk
                             </a>
@@ -576,7 +581,7 @@
                             </a>
                         </li>
                         <br> 
-                        <li>
+                        <li id="result59">
                             <a href="https://github.com/vnrom/bypass/raw/master/Test_DPC.apk" data-wpel-link="exclude">
                                 Test_DPC.apk
                             </a> 
@@ -586,7 +591,7 @@
                             </a>
                         </li>
                         <br> 
-                        <li>
+                        <li id="result60">
                             <a href="https://github.com/vnrom/bypass/raw/master/QuickShortcutMaker.apk" data-wpel-link="exclude">
                                 QuickShortcutMaker.apk
                             </a>
@@ -596,7 +601,7 @@
                             </a>
                         </li>
                         <br> 
-                        <li>
+                        <li id="result61">
                             <a href="https://github.com/vnrom/bypass/raw/master/Apex_Launcher.apk" data-wpel-link="exclude">
                                 Apex_Launcher.apk
                             </a>
@@ -606,7 +611,7 @@
                             </a>
                         </li>
                         <br> 
-                        <li>
+                        <li id="result62">
                             <a href="https://github.com/vnrom/bypass/raw/master/Nova_Launcher.apk" data-wpel-link="exclude">
                                 Nova_Launcher.apk
                             </a>
@@ -616,7 +621,7 @@
                             </a>
                         </li>
                         <br> 
-                        <li>
+                        <li id="result63">
                             <a href="https://github.com/vnrom/bypass/raw/master/Menu_Button.apk" data-wpel-link="exclude">
                                 Menu_Button.apk
                             </a>
@@ -626,7 +631,7 @@
                             </a>
                         </li>
                         <br> 
-                        <li>
+                        <li id="result64">
                             <a href="https://github.com/vnrom/bypass/raw/master/ES_File_Explorer_4.2.4.6.4.apk" data-wpel-link="exclude">
                                 ES_File_Explorer.apk
                             </a> 
@@ -636,7 +641,7 @@
                             </a>
                         </li>
                         <br> 
-                        <li>
+                        <li id="result65">
                             <a href="https://github.com/vnrom/bypass/raw/master/Setting.apk" data-wpel-link="exclude">
                                 Setting.apk
                             </a>
@@ -646,7 +651,7 @@
                             </a>
                         </li>
                         <br> 
-                        <li>
+                        <li id="result66">
                             <a href="https://github.com/vnrom/bypass/raw/master/HushSMS.apk" data-wpel-link="exclude">
                                 HushSMS.apk
                             </a>
@@ -656,7 +661,7 @@
                             </a>
                         </li>
                         <br> 
-                        <li>
+                        <li id="result67">
                             <a href="https://github.com/vnrom/bypass/raw/master/Phone_Clone.apk" data-wpel-link="exclude">
                                 Phone_Clone.apk
                             </a>
@@ -666,7 +671,7 @@
                             </a>
                         </li>
                         <br> 
-                            <li>
+                            <li id="result68">
                                 <a href="https://github.com/vnrom/bypass/raw/master/File_Commander_Manager_9.6.60050.apk" data-wpel-link="exclude">
                                     File_Commander_Manager.apk
                                 </a> 
@@ -676,7 +681,7 @@
                                 </a>
                             </li>
                             <br> 
-                        <li>
+                        <li id="result69">
                             <a href="https://github.com/vnrom/bypass/raw/master/Smart_Switch_Mobile_9.5.03.0.apk" data-wpel-link="exclude">
                                 Smart_Switch_Mobile.apk
                             </a>
